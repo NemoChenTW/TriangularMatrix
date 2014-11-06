@@ -8,7 +8,7 @@ Using one dimension STL vector to store triangular matrix.
 
 ## Prepare ##
 1. Decide the type of triangular matrix you need (ex. UpperTriangularMatrix).
-2. Include the corresponding header file (ex. UpperTriangularMatrix.h).
+2. Include the header file `libTriangularMatrix.h`.
 3. Set the size of matrix.
 4. Initial triangular matrix.
 
@@ -23,9 +23,12 @@ Using one dimension STL vector to store triangular matrix.
 `int getElement(unsigned int index_I, unsigned int index_J)`
 
 ###Show Matrix###
-+ `void showMatrix(bool showALL = false)`
-+ `void showSymmetricalMatrix(bool showALL = false)`
-+ `void showOneDimensionData()`
++ `void showMatrix(bool showALL = false);`
++ `void showSymmetricalMatrix(bool showALL = false);`
++ `void showOneDimensionData();`
+
+###Show Version##
++ `TriangularMatrixEnv::showVersion();`
 
 
 ##Example##
@@ -42,52 +45,53 @@ Using one dimension STL vector to store triangular matrix.
 
 #include <iostream>
 
-#include "UpperTriangularMatrix.h"
-#include "LowerTriangularMatrix.h"
+#include "src/libTriangularMatrix.h"
 
 using namespace std;
 
 int main()
 {
+    TriangularMatrixEnv::showVersion();
+
     cout << "Test UpperTriangularMatrix." << endl;
-	UpperTriangularMatrix UTM;
-	int sizeOfMatrix = 5;
-	UTM.setSizeOfMatrix(sizeOfMatrix);
-	UTM.initial();
+    UpperTriangularMatrix UTM;
+    int sizeOfMatrix = 5;
+    UTM.setSizeOfMatrix(sizeOfMatrix);
+    UTM.initial();
 
-	int count = 1;
-	for(int j = 0; j < sizeOfMatrix; j++)
-	{
-		for(int k = j; k < sizeOfMatrix; k++)
-		{
-			UTM.setElement(j,k,count++);
-		}
-	}
-	UTM.showOneDimensionData();
+    int count = 1;
+    for(int j = 0; j < sizeOfMatrix; j++)
+    {
+        for(int k = j; k < sizeOfMatrix; k++)
+        {
+            UTM.setElement(j,k,count++);
+        }
+    }
+    UTM.showOneDimensionData();
 
-	UTM.showMatrix();
-	UTM.showSymmetricalMatrix();
-	cout << endl;
+    UTM.showMatrix();
+    UTM.showSymmetricalMatrix();
+    cout << endl;
 
 
-	cout << "Test LowerTriangularMatrix." << endl;
-	LowerTriangularMatrix LTM;
+    cout << "Test LowerTriangularMatrix." << endl;
+    LowerTriangularMatrix LTM;
 
-	LTM.setSizeOfMatrix(sizeOfMatrix);
-	LTM.initial();
+    LTM.setSizeOfMatrix(sizeOfMatrix);
+    LTM.initial();
 
-	count = 1;
-	for(int j = 0; j < sizeOfMatrix; j++)
-	{
-		for(int k = 0; k <= j; k++)
-		{
-			LTM.setElement(j,k,count++);
-		}
-	}
-	UTM.showOneDimensionData();
+    count = 1;
+    for(int j = 0; j < sizeOfMatrix; j++)
+    {
+        for(int k = 0; k <= j; k++)
+        {
+            LTM.setElement(j,k,count++);
+        }
+    }
+    UTM.showOneDimensionData();
 
-	LTM.showMatrix();
-	LTM.showSymmetricalMatrix();
-	return 0;
+    LTM.showMatrix();
+    LTM.showSymmetricalMatrix();
+    return 0;
 }
 ```
