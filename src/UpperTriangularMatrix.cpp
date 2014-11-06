@@ -5,7 +5,7 @@
  *      Author: nemo
  */
 
-#include "UpperTriangularMatrix.h"
+#include "header/UpperTriangularMatrix.h"
 #include <iostream>
 UpperTriangularMatrix::UpperTriangularMatrix(TriangularMatrixType triangularMatrixType)
 {

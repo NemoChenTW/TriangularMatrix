@@ -5,7 +5,7 @@
  *      Author: nemo
  */
 
-#include "TriangularMatrix.h"
+#include "header/TriangularMatrix.h"
 
 #include <iostream>
 #include <iomanip>

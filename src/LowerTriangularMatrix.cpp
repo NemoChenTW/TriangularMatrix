@@ -5,7 +5,7 @@
  *      Author: nemo
  */
 
-#include "LowerTriangularMatrix.h"
+#include "header/LowerTriangularMatrix.h"
 
 LowerTriangularMatrix::LowerTriangularMatrix(TriangularMatrixType triangularMatrixType)
 {

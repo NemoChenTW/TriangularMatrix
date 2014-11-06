@@ -7,13 +7,14 @@
 
 #include <iostream>
 
-#include "UpperTriangularMatrix.h"
-#include "LowerTriangularMatrix.h"
+#include "src/libTriangularMatrix.h"
 
 using namespace std;
 
 int main()
 {
+	TriangularMatrixEnv::showVersion();
+
 	cout << "Test UpperTriangularMatrix." << endl;
 	UpperTriangularMatrix UTM;
 	int sizeOfMatrix = 5;
