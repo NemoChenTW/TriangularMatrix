@@ -31,8 +31,8 @@ Using one dimension STL vector to store triangular matrix.
 + `TriangularMatrixEnv::showVersion();`
 
 ## Shared Library ##
-If you need the shared library version, download the file in directory `Lib`. <br/>
-The directory `Lib` include all the file you need by using in shared library way.
+If you need the shared library version, download the file in directory `Lib32` or `Lib64`. <br/>
+The directory include all the file you need by using in shared library way.
 
 ##Example##
 
