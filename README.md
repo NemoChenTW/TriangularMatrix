@@ -30,6 +30,9 @@ Using one dimension STL vector to store triangular matrix.
 ###Show Version##
 + `TriangularMatrixEnv::showVersion();`
 
+## Shared Library ##
+If you need the shared library version, download the file in directory `Lib`. <br/>
+The directory `Lib` include all the file you need by using in shared library way.
 
 ##Example##
 
@@ -45,13 +48,13 @@ Using one dimension STL vector to store triangular matrix.
 
 #include <iostream>
 
-#include "src/libTriangularMatrix.h"
+#include "Include/libTriangularMatrix.h"
 
 using namespace std;
 
 int main()
 {
-    TriangularMatrixEnv::showVersion();
+    TriangularMatrix::showVersion();
 
     cout << "Test UpperTriangularMatrix." << endl;
     UpperTriangularMatrix UTM;
