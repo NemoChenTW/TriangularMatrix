@@ -9,6 +9,12 @@
 
 #include <iostream>
 #include <iomanip>
+#include <stdio.h>
+
+namespace TriangularMatrixEnv
+{
+    const char* const _VERSION = "1.0.1";
+}
 
 TriangularMatrix::TriangularMatrix()
 :_sizeOfMatrix(0), _isInitialed(false)
@@ -160,4 +166,12 @@ void TriangularMatrix::showOneDimensionData()
 	}
 
 	cout << endl;
+}
+
+///		Show version information.
+void TriangularMatrix::showVersion()
+{
+	printf("[TriangularMatrix]\n");
+	printf("Version: %s\n", TriangularMatrixEnv::_VERSION);
+	printf("Last Update: %s %s\n\n", __DATE__, __TIME__);
 }

@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-	TriangularMatrixEnv::showVersion();
+	TriangularMatrix::showVersion();
 
 	cout << "Test UpperTriangularMatrix." << endl;
 	UpperTriangularMatrix UTM;
