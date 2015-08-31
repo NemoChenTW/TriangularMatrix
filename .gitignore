@@ -28,9 +28,6 @@
 *.app
 
 # Eclipse
-.project
-.cproject
-.settings/
 /Debug/
 /SharedLibrary/
 /Release/
