@@ -29,6 +29,6 @@
 
 # Eclipse
 /Debug/
-/SharedLibrary/
 /Release/
-/SharedLibrary32/
+/Lib32/
+/Lib64/
