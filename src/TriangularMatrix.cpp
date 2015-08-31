@@ -13,7 +13,7 @@
 
 namespace TriangularMatrixEnv
 {
-    const char* const _VERSION = "1.0.1";
+    const char* const _VERSION = "1.0.2";
 }
 
 TriangularMatrix::TriangularMatrix()
