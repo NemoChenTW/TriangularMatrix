@@ -31,13 +31,13 @@ public:
 	int getElement(unsigned int index_I, unsigned int index_J);
 
 	///		Show element in matrix.
-	void showMatrix(bool showALL = false);
+	void showMatrix(bool showALL = false, unsigned int width = 3);
 
 	///		Show element in matrix symmetrically.
-	void showSymmetricalMatrix(bool showALL = false);
+	void showSymmetricalMatrix(bool showALL = false, unsigned int width = 3);
 
 	///		Show element in 1-dimension container.
-	void showOneDimensionData();
+	void showOneDimensionData(unsigned int width = 3);
 
 	///		Get triangularMatrixType.
 	TriangularMatrixType triangularMatrixType() {return _triangularMatrixType;}

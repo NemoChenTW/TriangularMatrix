@@ -83,7 +83,7 @@ int TriangularMatrix::getElement(unsigned int index_I, unsigned int index_J)
  *
  * @param showALL	Show all element include '0' or not.
  */
-void TriangularMatrix::showMatrix(bool showALL)
+void TriangularMatrix::showMatrix(bool showALL, unsigned int width)
 {
 	for(unsigned int j = 0; j < _sizeOfMatrix; j++)
 	{
@@ -92,16 +92,18 @@ void TriangularMatrix::showMatrix(bool showALL)
 			int elementValue = getElement(j,k);
 			if(showALL)
 			{
-				cout << setw(2) << setfill('0') << elementValue << " ";
+				cout << setw(width) << setfill('0') << elementValue << " ";
 			}
 			else
 			{
 				if(elementValue == 0)
 				{
-					cout << "   ";
+					cout << " ";
+					for(auto i = 0; i < width; i++)
+						cout << " ";
 				}
 				else
-					cout << setw(2) << setfill('0') << elementValue << " ";
+					cout << setw(width) << setfill('0') << elementValue << " ";
 			}
 		}
 		cout << endl;
@@ -114,7 +116,7 @@ void TriangularMatrix::showMatrix(bool showALL)
  *
  * @param showALL	Show all element include '0' or not.
  */
-void TriangularMatrix::showSymmetricalMatrix(bool showALL)
+void TriangularMatrix::showSymmetricalMatrix(bool showALL, unsigned int width)
 {
 	for(unsigned int j = 0; j < _sizeOfMatrix; j++)
 	{
@@ -123,16 +125,18 @@ void TriangularMatrix::showSymmetricalMatrix(bool showALL)
 			int elementValue = getElement(k,j);
 			if(showALL)
 			{
-				cout << setw(2) << setfill('0') << elementValue << " ";
+				cout << setw(width) << setfill('0') << elementValue << " ";
 			}
 			else
 			{
 				if(elementValue == 0)
 				{
-					cout << "   ";
+					cout << " ";
+					for(auto i = 0; i < width; i++)
+						cout << " ";
 				}
 				else
-					cout << setw(2) << setfill('0') << elementValue << " ";
+					cout << setw(width) << setfill('0') << elementValue << " ";
 			}
 		}
 		cout << endl;
@@ -143,7 +147,7 @@ void TriangularMatrix::showSymmetricalMatrix(bool showALL)
 /**
  * @brief	Show element in 1-dimension container.
  */
-void TriangularMatrix::showOneDimensionData()
+void TriangularMatrix::showOneDimensionData(unsigned int width)
 {
 	vector <int>::iterator triangularMatrix_Iter;
 
@@ -154,12 +158,12 @@ void TriangularMatrix::showOneDimensionData()
 	{
 		if (triangularMatrix_Iter == _triangularMatrix.begin())
 		{
-			cout << "(" << indexCounter++ << ")=" << setw(2) << setfill('0')
+			cout << "(" << indexCounter++ << ")=" << setw(width) << setfill('0')
 					<< *triangularMatrix_Iter;
 		}
 		else
 		{
-			cout << ", " << "(" << indexCounter++ << ")=" << setw(2)
+			cout << ", " << "(" << indexCounter++ << ")=" << setw(width)
 					<< setfill('0') << *triangularMatrix_Iter;
 		}
 
