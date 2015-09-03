@@ -83,11 +83,14 @@ int TriangularMatrix::getElement(unsigned int index_I, unsigned int index_J)
  *
  * @param showALL	Show all element include '0' or not.
  */
-void TriangularMatrix::showMatrix(bool showALL, unsigned int width)
+void TriangularMatrix::showMatrix(unsigned int size, bool showALL, unsigned int width)
 {
-	for(unsigned int j = 0; j < _sizeOfMatrix; j++)
+	if(size > _sizeOfMatrix || size == 0)
+		size = _sizeOfMatrix;
+
+	for(unsigned int j = 0; j < size; j++)
 	{
-		for(unsigned int k = 0; k < _sizeOfMatrix; k++)
+		for(unsigned int k = 0; k < size; k++)
 		{
 			int elementValue = getElement(j,k);
 			if(showALL)
@@ -116,11 +119,14 @@ void TriangularMatrix::showMatrix(bool showALL, unsigned int width)
  *
  * @param showALL	Show all element include '0' or not.
  */
-void TriangularMatrix::showSymmetricalMatrix(bool showALL, unsigned int width)
+void TriangularMatrix::showSymmetricalMatrix(unsigned int size, bool showALL, unsigned int width)
 {
-	for(unsigned int j = 0; j < _sizeOfMatrix; j++)
+	if(size > _sizeOfMatrix || size == 0)
+		size = _sizeOfMatrix;
+
+	for(unsigned int j = 0; j < size; j++)
 	{
-		for(unsigned int k = 0; k < _sizeOfMatrix; k++)
+		for(unsigned int k = 0; k < size; k++)
 		{
 			int elementValue = getElement(k,j);
 			if(showALL)

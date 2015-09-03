@@ -31,10 +31,10 @@ public:
 	int getElement(unsigned int index_I, unsigned int index_J);
 
 	///		Show element in matrix.
-	void showMatrix(bool showALL = false, unsigned int width = 3);
+	void showMatrix(unsigned int size = 0, bool showALL = false, unsigned int width = 3);
 
 	///		Show element in matrix symmetrically.
-	void showSymmetricalMatrix(bool showALL = false, unsigned int width = 3);
+	void showSymmetricalMatrix(unsigned int size = 0, bool showALL = false, unsigned int width = 3);
 
 	///		Show element in 1-dimension container.
 	void showOneDimensionData(unsigned int width = 3);
